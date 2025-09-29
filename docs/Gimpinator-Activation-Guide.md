@@ -50,17 +50,17 @@ To maintain the sacred structure of this plugin archive, **do not use WinRAR** f
 Use one of the following tools to preserve the intended folder hierarchy:
 
 • 🪄 **Windows Default Unzip Utility**  
-  Right-click the ZIP file and choose **“Extract All…”**  
-  This method typically preserves folder structure and is safe for onboarding.
+Right-click the ZIP file and choose **"Extract All..."**  
+This method typically preserves folder structure and is safe for onboarding.
 
 • 🛡️ **7-Zip (Preferred for Legacy Scrolls)**  
-  Download from the official site: https://www.7-zip.org  
-  After installation:  
-  1. Right-click the ZIP file.  
-  2. Select **“7-Zip → Extract to ‘Gimpinator_EX\’”**  
-     This ensures all assets remain bundled within the correct folder.
+Download from the official site: https://www.7-zip.org  
+After installation:  
+1. Right-click the ZIP file.  
+2. Select **"7-Zip → Extract to 'Gimpinator_EX\'"**  
+   This ensures all assets remain bundled within the correct folder.
 
-⚠️ Do *not* use “Extract Here” unless you are certain the archive contains a single folder.  
+⚠️ Do *not* use "Extract Here" unless you are certain the archive contains a single folder.  
 Misaligned glyphs and scattered assets may result in onboarding confusion.
 
 🚫 **Avoid WinRAR**  
