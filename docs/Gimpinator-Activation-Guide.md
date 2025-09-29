@@ -22,8 +22,9 @@ It supports **Stable Horde** (a free, online distributed backend) and **optional
 
 ### 1. Download the Plugin  
 Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
-Click to download the ZIP file containing the pre-edited plugin.  
-No renaming or manual edits required. Folder structure and username references are already corrected.
+Click to download the ZIP file containing the pre-edited plugin. The folder structure is already corrected. 
+You will need to edit the plugin's .py file though as it uses a defaulyt USERNAME.You will need to 
+edit in your own Windoes username. Instructions of how to do so are inclluded in this file.
 
 ### 2. Unzip and Move  
 Extract to:  
