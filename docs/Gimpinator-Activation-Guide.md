@@ -26,6 +26,7 @@ Click the green box that says “Code” and select “Download ZIP”
 
 Extract the ZIP to:  
 C:\Users\<UserName>\AppData\Roaming\GIMP\3.0\plug-ins
+This will create a folder named "Gimpinator-main" inside the plugins folder. Please rename this folder to "Gimpinator_ex"
 
 **Note:**  
 Inside this download you will find a file named `gimpinator_ex.py`. You will need to edit this file.  
@@ -39,7 +40,7 @@ To find your Windows username:
 Open Command Prompt → type: `echo %USERNAME%` → press Enter  
 Use the name it displays to replace `USERNAME` in the plugin file.
 
-Rename the extracted folder to: `Gimpinator_ex`
+If you have not already done so, please rename the folder that you extracted the plugin to from Gimpinator-main to "Gimpinator_ex"
 
 Inside that folder, confirm you have:  
 • gimpinator_ex.py  
