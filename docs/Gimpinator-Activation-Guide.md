@@ -7,8 +7,8 @@ Confirmed working on Windows 11 – September 2025
 ## 🛡️ RH Legacy Crest – Symbolic Activation  
 This plugin scroll was authored by RangerHawk Studios.  
 Every glyph tested. Every sidetrack archived.  
-Symbolic crest placeholder:  
-[Insert crest image or ASCII glyph]
+![RH Legacy Crest](assets/crest.png)
+
 
 ---
 
