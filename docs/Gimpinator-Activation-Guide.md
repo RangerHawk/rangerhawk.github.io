@@ -1,7 +1,8 @@
-# 🧙‍♂️ Gimpinator EX Plugin for GIMP 3.x
-
+# 🧙‍♂️ Gimpinator EX Plugin for GIMP 3.x  
 Stable Horde Integration • Local Model Ready • RH Legacy Verified  
 Confirmed working on Windows 11 – September 2025
+
+---
 
 ## 🛡️ RH Legacy Crest – Symbolic Activation
 
@@ -10,160 +11,151 @@ Every glyph tested. Every sidetrack archived.
 Symbolic crest placeholder:  
 [Insert crest image or ASCII glyph]
 
+---
+
 ## 🌱 What Is Gimpinator EX?
 
-Gimpinator EX is a plugin that lets you generate AI images directly inside GIMP using text prompts.  
+Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.  
 It supports Stable Horde (free distributed backend) and optional local model scaffolding.
+
+---
 
 ## 📦 Installation Guide (Beginner-Friendly)
 
-### 1. Download the Plugin
+### 1. Download the Plugin  
+Visit: https://github.com/PCOW/Gimpinator  
+Click the green “Code” button → “Download ZIP”
 
-Go to: https://github.com/PCOW/Gimpinator  
-Click the green box that says “Code” and select “Download ZIP”
-
-### 2. Unzip and Move
-
+### 2. Unzip and Move  
 Extract the ZIP to:  
-C:\Users\<UserName>\AppData\Roaming\GIMP\3.0\plug-ins
-This will create a folder named "Gimpinator-main" inside the plugins folder. Please rename this folder to "Gimpinator_ex"
+C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\
 
-**Note:**  
-Inside this download you will find a file named `gimpinator_ex.py`. You will need to edit this file.  
-(Suggested editing with Notepad++ https://notepad-plus-plus.org/downloads/, but Windows Notepad will work fine.)
-
-The USERNAME in this file is incorrect. Near the top of the file you will find a line:  
-`sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")`  
-Replace `OlafW` or `USERNAME` with your actual Windows username.
-
-To find your Windows username:  
-Open Command Prompt → type: `echo %USERNAME%` → press Enter  
-Use the name it displays to replace "OlafW" or "USERNAME" in the plugin file.
-
-If you have not already done so, please rename the folder that you extracted the plugin to from "Gimpinator-main" to "Gimpinator_ex" The plugin itself was created to use this directory structure and will not work otherwise. Whomever created the zip file missed this detail.
+If you're using the original ZIP from PCOW, it may create a folder named `Gimpinator-main`.  
+Rename it to `gimpinator_ex` if needed.
 
 Inside that folder, confirm you have:  
-• gimpinator_ex.py  
-• gimpinator_config.json (optional)
+- gimpinator_ex.py  
+- gimpinator_config.json (optional)
 
-This optional config file stores your Stable Horde API key. It does not connect to GitHub.  
-If it’s missing, you can create one manually using the instructions below.
+---
 
-### 3. Check File Permissions
+### 3. Edit the Plugin File  
+Open `gimpinator_ex.py` in Notepad++ or any text editor.  
+Find the line near the top:
 
-Right-click each file → Properties  
-• Uncheck “Read-only”  
-• Click “Unblock” if present  
-Apply and repeat for all plugin files (.py)
+sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")
 
-### 4. Create Config File (Optional for Stable Horde)
+Replace `OlafW` with your actual Windows username.  
+To find it:  
+Open Command Prompt → type `echo %USERNAME%` → press Enter
 
-To use Stable Horde, you’ll need a free API key.
+---
 
-How to get one:  
+### 4. Check File Permissions  
+Right-click each plugin file → Properties  
+- Uncheck “Read-only”  
+- Click “Unblock” if present  
+Apply and repeat for all `.py` files.
+
+---
+
+### 5. Create Config File (Optional for Stable Horde)  
+To use Stable Horde, get a free API key:
+
 - Go to https://stablehorde.net  
-- Click "Login" in the top right  
-- Sign in using Discord, GitHub, or another method  
-- Click your username → go to "Account"  
-- Scroll down to find your API key and copy it
+- Log in via Discord, GitHub, etc.  
+- Click your username → Account → Copy your API key
 
-### 5. Create the Config File
+Create a file named `gimpinator_config.json` with this content:
 
-- Open Notepad or Notepad++  
-- Paste this into the file (replace `your-key-here` with your actual API key):  
-`{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }`  
-- Click File → Save As  
-- Name the file: `gimpinator_config.json`  
-- Set "Save as type" to "All Files"  
-- Save it inside the `Gimpinator_ex` folder
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }
 
-### 6. Install Python
+Save it inside the `gimpinator_ex` folder using “Save as type: All Files”.
 
-Go to: https://www.python.org/downloads/  
+---
+
+### 6. Install Python  
+Go to https://www.python.org/downloads/  
 Install Python 3.10 or higher  
 Check “Add Python to PATH” during setup
 
-### 7. Verify Python Installation
-
-Open Command Prompt → type: `where python`  
-This will show you where Python is installed.
-
+Open Command Prompt → type `where python`  
 If it doesn’t appear:  
-• You may need to reinstall Python  
-• Double-check folder path and file names  
-• Ensure Python is installed and added to PATH  
-• Restart your computer
+- Reinstall Python  
+- Ensure PATH is set  
+- Restart your computer
 
-## 🧠 Advanced Activation Guide (Fully Restored)
+---
 
-### 📁 Folder Structure
+## 🧠 Advanced Activation Guide
 
-Plugin folder:  
-C:\Users\<YourName>\AppData\Roaming\GIMP\3.0\plug-ins\Gimpinator_ex
+### 📁 Folder Structure  
+C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
+- gimpinator_ex.py  
+- gimpinator_config.json (optional)
 
-Contents:  
-• gimpinator_ex.py  
-• gimpinator_config.json (optional)
+---
 
-### 🐍 Python Environment
+### 🐍 Python Environment  
+Python 3.10 or higher required  
+Install dependencies:
 
-Python 3.10 or higher is required.
+pip install requests pillow PyGObject
 
-Install dependencies:  
-`pip install requests pillow PyGObject`
+Optional for local model scaffolding:
 
-Optional for local model scaffolding:  
-`pip install diffusers transformers torch accelerate`
+pip install diffusers transformers torch accelerate
 
-### ⚙️ Plugin Script Requirements
+---
 
+### ⚙️ Plugin Script Requirements  
 Start of file:  
-`#!/usr/bin/env python3`
+#!/usr/bin/env python3
 
 Required imports:  
-`import gi`  
-`gi.require_version("Gimp", "3.0")`  
-`from gi.repository import Gimp, GimpUi, GObject, GLib, Gio, Gtk`  
-`import sys`  
-`import os`  
-`import json`
+import gi  
+gi.require_version("Gimp", "3.0")  
+from gi.repository import Gimp, GimpUi, GObject, GLib, Gio, Gtk  
+import sys, os, json
 
 Plugin class:  
-`class Gimpinator(Gimp.PlugIn):`  
-`    def do_query_procedures(self):`  
-`        return ["plug-in-gimpinator-ex"]`
+class Gimpinator(Gimp.PlugIn):  
+    def do_query_procedures(self):  
+        return ["plug-in-gimpinator-ex"]
 
 Main invocation:  
-`Gimp.main(Gimpinator.__gtype__, sys.argv)`
+Gimp.main(Gimpinator.__gtype__, sys.argv)
 
-### 🧭 Menu Path
+---
 
-Appears under:  
-Filters → Gimpinator → Gimpinator EX
-
+### 🧭 Menu Path  
+Filters → Gimpinator → Gimpinator EX  
 Optional grouping:  
-`proc.add_menu_path("<Image>/Filters/AI")`
+proc.add_menu_path("<Image>/Filters/AI")
 
-### 🔐 Optional Config File
+---
 
-Contents of `gimpinator_config.json`:  
-`{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }`
+### 🔐 Optional Config File  
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }
 
-## 🧾 Notes
+---
 
-Tested on GIMP 3.0 with Python 3.13  
-Confirmed working on Windows 11  
-Plugin appears under Filters → Gimpinator → Gimpinator EX  
-Consider adding this guide to your README or onboarding scroll
+## 🧾 Notes  
+- Tested on GIMP 3.0 with Python 3.13  
+- Confirmed working on Windows 11  
+- Appears under Filters → Gimpinator → Gimpinator EX  
+- Consider adding this guide to your README or onboarding scroll
 
-## 🧙 Contributor
+---
 
+## 🧙 Contributor  
 Joe Molnar  
 Founder of RangerHawk Studios  
 Creative systems architect and mythic plugin ritualist
 
-## 🪶 RH Legacy Footer
+---
 
+## 🪶 RH Legacy Footer  
 This scroll was forged in the legacy archive of RangerHawk Studios.  
 Every plugin tested. Every sidetrack preserved.  
 May it guide future creators toward prompt invocation and plugin sovereignty.
