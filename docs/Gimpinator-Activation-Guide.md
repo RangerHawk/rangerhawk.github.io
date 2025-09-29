@@ -32,7 +32,7 @@ Inside this download you will find a file named `gimpinator_ex.py`. You will nee
 (Suggested editing with Notepad++ https://notepad-plus-plus.org/downloads/, but Windows Notepad will work fine.)
 
 The USERNAME in this file is incorrect. Near the top of the file you will find a line:  
-`sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")`  
+`sys.path.append("C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")`  
 Replace `OlafW` or `USERNAME` with your actual Windows username.
 
 To find your Windows username:  
