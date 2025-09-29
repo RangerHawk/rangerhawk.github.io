@@ -83,6 +83,11 @@ The RangerHawk version is aligned with this scroll and verified for RH Legacy on
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
 - gimpinator_ex.py  
 - gimpinator_config.json (optional)
+### 🔐 Optional Config File for Stable Horde  
+To enable Stable Horde integration, create a file named gimpinator_config.json with the following content:  
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
+Save it inside the gimpinator_ex folder using “Save as type: All Files”.  
+You can obtain a free API key by logging into https://stablehorde.net and visiting your account page.
 
 ### 🐍 Python Environment  
 Python 3.10 or higher required  
