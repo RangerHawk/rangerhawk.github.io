@@ -4,8 +4,7 @@ Confirmed working on Windows 11 – September 2025
 
 ---
 
-## 🛡️ RH Legacy Crest – Symbolic Activation
-
+## 🛡️ RH Legacy Crest – Symbolic Activation  
 This plugin scroll was authored by RangerHawk Studios.  
 Every glyph tested. Every sidetrack archived.  
 Symbolic crest placeholder:  
@@ -13,25 +12,29 @@ Symbolic crest placeholder:
 
 ---
 
-## 🌱 What Is Gimpinator EX?
-
+## 🌱 What Is Gimpinator EX?  
 Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.  
 It supports Stable Horde (free distributed backend) and optional local model scaffolding.
 
 ---
 
-## 📦 Installation Guide (Beginner-Friendly)
+## 📦 Installation Guide (Beginner-Friendly)  
 
 ### 1. Download the Plugin  
 Visit: https://github.com/PCOW/Gimpinator  
-Click the green “Code” button → “Download ZIP”
+Click the green “Code” button → “Download ZIP”  
+
+If you downloaded the **RangerHawk Studios version**, the folder structure and username references are already corrected.  
+No renaming or manual edits are required unless you’re using the original ZIP from PCOW.
+
+---
 
 ### 2. Unzip and Move  
 Extract the ZIP to:  
-C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\
+C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\  
 
-If you're using the original ZIP from PCOW, it may create a folder named `Gimpinator-main`.  
-Rename it to `gimpinator_ex` if needed.
+If using the original PCOW ZIP, it may create a folder named `Gimpinator-main`.  
+Rename it to `gimpinator_ex` if needed.  
 
 Inside that folder, confirm you have:  
 - gimpinator_ex.py  
@@ -39,15 +42,16 @@ Inside that folder, confirm you have:
 
 ---
 
-### 3. Edit the Plugin File  
+### 3. Edit the Plugin File (PCOW Version Only)  
 Open `gimpinator_ex.py` in Notepad++ or any text editor.  
-Find the line near the top:
-
-sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")
+Find the line near the top:  
+sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")  
 
 Replace `OlafW` with your actual Windows username.  
 To find it:  
-Open Command Prompt → type `echo %USERNAME%` → press Enter
+Open Command Prompt → type `echo %USERNAME%` → press Enter  
+
+If you downloaded the RangerHawk version, this line already uses `USERNAME` as a placeholder.
 
 ---
 
@@ -60,15 +64,13 @@ Apply and repeat for all `.py` files.
 ---
 
 ### 5. Create Config File (Optional for Stable Horde)  
-To use Stable Horde, get a free API key:
-
+To use Stable Horde, get a free API key:  
 - Go to https://stablehorde.net  
 - Log in via Discord, GitHub, etc.  
-- Click your username → Account → Copy your API key
+- Click your username → Account → Copy your API key  
 
-Create a file named `gimpinator_config.json` with this content:
-
-{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }
+Create a file named `gimpinator_config.json` with this content:  
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
 
 Save it inside the `gimpinator_ex` folder using “Save as type: All Files”.
 
@@ -77,7 +79,7 @@ Save it inside the `gimpinator_ex` folder using “Save as type: All Files”.
 ### 6. Install Python  
 Go to https://www.python.org/downloads/  
 Install Python 3.10 or higher  
-Check “Add Python to PATH” during setup
+Check “Add Python to PATH” during setup  
 
 Open Command Prompt → type `where python`  
 If it doesn’t appear:  
@@ -87,7 +89,7 @@ If it doesn’t appear:
 
 ---
 
-## 🧠 Advanced Activation Guide
+## 🧠 Advanced Activation Guide  
 
 ### 📁 Folder Structure  
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
@@ -98,30 +100,28 @@ C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex
 
 ### 🐍 Python Environment  
 Python 3.10 or higher required  
-Install dependencies:
+Install dependencies:  
+pip install requests pillow PyGObject  
 
-pip install requests pillow PyGObject
-
-Optional for local model scaffolding:
-
+Optional for local model scaffolding:  
 pip install diffusers transformers torch accelerate
 
 ---
 
 ### ⚙️ Plugin Script Requirements  
 Start of file:  
-#!/usr/bin/env python3
+#!/usr/bin/env python3  
 
 Required imports:  
 import gi  
 gi.require_version("Gimp", "3.0")  
 from gi.repository import Gimp, GimpUi, GObject, GLib, Gio, Gtk  
-import sys, os, json
+import sys, os, json  
 
 Plugin class:  
 class Gimpinator(Gimp.PlugIn):  
     def do_query_procedures(self):  
-        return ["plug-in-gimpinator-ex"]
+        return ["plug-in-gimpinator-ex"]  
 
 Main invocation:  
 Gimp.main(Gimpinator.__gtype__, sys.argv)
@@ -130,6 +130,7 @@ Gimp.main(Gimpinator.__gtype__, sys.argv)
 
 ### 🧭 Menu Path  
 Filters → Gimpinator → Gimpinator EX  
+
 Optional grouping:  
 proc.add_menu_path("<Image>/Filters/AI")
 
@@ -144,6 +145,7 @@ proc.add_menu_path("<Image>/Filters/AI")
 - Tested on GIMP 3.0 with Python 3.13  
 - Confirmed working on Windows 11  
 - Appears under Filters → Gimpinator → Gimpinator EX  
+- RangerHawk version uses `USERNAME` placeholder and correct folder structure  
 - Consider adding this guide to your README or onboarding scroll
 
 ---
@@ -158,7 +160,7 @@ Creative systems architect and mythic plugin ritualist
 ## 🪶 RH Legacy Footer  
 This scroll was forged in the legacy archive of RangerHawk Studios.  
 Every plugin tested. Every sidetrack preserved.  
-May it guide future creators toward prompt invocation and plugin sovereignty.
+May it guide future creators toward prompt invocation and plugin sovereignty.  
 
 This scroll was co-forged using AI assistance, but the structure, sequence, and symbolic intent are authored by Joe Molnar of RangerHawk Studios.  
 Every step reflects a larger vision of mythic onboarding and creative sovereignty.
