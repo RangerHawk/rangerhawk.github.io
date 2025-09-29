@@ -18,13 +18,15 @@ It supports **Stable Horde** (a free, online distributed backend) and **optional
 
 ---
 
-## 📦 Installation Guide (Beginner-Friendly)
+## 📦 Installation Guide
+
+<details>
+<summary>🧰 Beginner Setup – RangerHawk Version</summary>
 
 ### 1. Download the Plugin  
 Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
-Click to download the ZIP file containing the pre-edited plugin. The folder structure is already corrected. 
-You will need to edit the plugin's .py file though as it uses a defaulyt USERNAME.You will need to 
-edit in your own Windoes username. Instructions of how to do so are inclluded in this file.
+Click to download the ZIP file containing the pre-edited plugin.  
+No renaming or manual edits required. Folder structure and username references are already corrected.
 
 ### 2. Unzip and Move  
 Extract to:  
@@ -59,9 +61,10 @@ If it doesn’t appear:
 - Ensure PATH is set  
 - Restart your computer
 
----
+</details>
 
-## 🧠 Advanced Activation Guide
+<details>
+<summary>🧪 Advanced Setup – Manual Configuration</summary>
 
 ### 📁 Folder Structure  
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
@@ -93,10 +96,20 @@ class Gimpinator(Gimp.PlugIn):
 Main invocation:  
 Gimp.main(Gimpinator.__gtype__, sys.argv)
 
+### 🛠️ Edit the Plugin File  
+Open `gimpinator_ex.py` in a text editor.  
+Find the line:  
+sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")  
+Replace `OlafW` with your actual Windows username.  
+To find it:  
+Open Command Prompt → type `echo %USERNAME%` → press Enter
+
 ### 🧭 Menu Path  
 Filters → Gimpinator → Gimpinator EX  
 Optional grouping:  
 proc.add_menu_path("<Image>/Filters/AI")
+
+</details>
 
 ---
 
@@ -110,7 +123,7 @@ proc.add_menu_path("<Image>/Filters/AI")
 
 ---
 
-## 🧙 Author 
+## 🧙 Author  
 Joe Molnar  
 Founder of RangerHawk Studios  
 Creative systems architect and mythic plugin ritualist
@@ -119,8 +132,10 @@ Creative systems architect and mythic plugin ritualist
 
 ## 🤖 AI Co-Author Acknowledgment  
 This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist with legacy documentation, plugin ritualization, and symbolic onboarding.  
-Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.  Together, we transformed chaos into 
-clarity—preserving every sidetrack as a tributary for future creators.
+Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.  
+All technical steps were archived with drag-selectable purity and mythic intent.
+
+Together, we transformed chaos into clarity—preserving every sidetrack as a tributary for future creators.
 
 ---
 
