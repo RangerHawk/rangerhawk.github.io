@@ -38,9 +38,9 @@ Replace `OlafW` or `USERNAME` with your actual Windows username.
 
 To find your Windows username:  
 Open Command Prompt → type: `echo %USERNAME%` → press Enter  
-Use the name it displays to replace `USERNAME` in the plugin file.
+Use the name it displays to replace "OlafW" or "USERNAME" in the plugin file.
 
-If you have not already done so, please rename the folder that you extracted the plugin to from Gimpinator-main to "Gimpinator_ex"
+If you have not already done so, please rename the folder that you extracted the plugin to from Gimpinator-main to "Gimpinator_ex" The plugin itself was created to use this directory structure and will not work otherwise. Whomever created the zip file missed this detail.
 
 Inside that folder, confirm you have:  
 • gimpinator_ex.py  
