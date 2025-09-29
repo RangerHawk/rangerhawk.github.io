@@ -14,7 +14,8 @@ Symbolic crest placeholder:
 
 ## 🌱 What Is Gimpinator EX?  
 Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.  
-It supports Stable Horde (free distributed backend) and optional local model scaffolding.
+It supports **Stable Horde** (a free, online distributed backend) and **optional local model scaffolding** via separate tools.  
+**Note:** Stable Horde is an online service. Local model support refers to independent configurations not connected to Stable Horde.
 
 ---
 
@@ -146,6 +147,7 @@ proc.add_menu_path("<Image>/Filters/AI")
 - Confirmed working on Windows 11  
 - Appears under Filters → Gimpinator → Gimpinator EX  
 - RangerHawk version uses `USERNAME` placeholder and correct folder structure  
+- Stable Horde is online-only; local model support is separate  
 - Consider adding this guide to your README or onboarding scroll
 
 ---
