@@ -13,8 +13,28 @@ Every glyph tested. Every sidetrack archived.
 
 ## 🌱 What Is Gimpinator EX?  
 Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.  
-It supports **Stable Horde** (a free, online distributed backend) and **optional local model scaffolding** via separate tools.  
-**Note:** Stable Horde is an online service. Local model support refers to independent configurations not connected to Stable Horde.
+It supports Stable Horde (a free, online distributed backend) and optional local model scaffolding via separate tools.  
+Note: Stable Horde is an online service. Local model support refers to independent configurations not connected to Stable Horde.
+
+---
+
+## 🔗 Plugin Versions & Download Links  
+There are two versions of the Gimpinator EX plugin available:
+
+- Original Plugin by PCOW  
+  https://github.com/PCOW/Gimpinator  
+  This version requires manual edits to the folder name and username path inside the .py file. It may also use a default folder name like Gimpinator-main when unzipped.
+
+- Beginner Version (Recommended)  
+  https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip  
+  This version has been pre-edited for symbolic clarity and onboarding ease.  
+  ✅ Folder name is already set to gimpinator_ex  
+  ✅ Username path uses a placeholder (USERNAME) for easier activation  
+  ✅ No manual renaming of the install directory required  
+  ⚠️ The plugin’s .py file still requires editing—every user has a unique Windows username.
+
+Use the original version only if you prefer to customize the plugin manually or compare upstream changes.  
+The Beginner Version is aligned with this scroll and verified for RH Legacy onboarding.
 
 ---
 
@@ -22,8 +42,9 @@ It supports **Stable Horde** (a free, online distributed backend) and **optional
 
 <details>
 <summary>🧰 Beginner Version</summary>
+
 ### 1. Download the Plugin  
-Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
+Visit: https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip  
 Click to download the ZIP file containing the pre-edited plugin.  
 No renaming or manual edits required. Folder structure and username references are already corrected.
 
@@ -38,7 +59,7 @@ Confirm files:
 Right-click each plugin file → Properties  
 - Uncheck “Read-only”  
 - Click “Unblock” if present  
-Apply and repeat for all `.py` files.
+Apply and repeat for all .py files.
 
 ### 4. Create Config File (Optional for Stable Horde)  
 To use Stable Horde, get a free API key:  
@@ -46,15 +67,15 @@ To use Stable Horde, get a free API key:
 - Log in via Discord, GitHub, etc.  
 - Click your username → Account → Copy your API key
 
-Create a file named `gimpinator_config.json` with this content:  
+Create a file named gimpinator_config.json with this content:  
 { "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
-Save it inside the plugin folder using “Save as type: All Files”.
+Save it inside the gimpinator_ex folder using “Save as type: All Files”.
 
 ### 5. Install Python  
 Go to https://www.python.org/downloads/  
 Install Python 3.10 or higher  
 Check “Add Python to PATH” during setup  
-Open Command Prompt → type `where python`  
+Open Command Prompt → type where python  
 If it doesn’t appear:  
 - Reinstall Python  
 - Ensure PATH is set  
@@ -64,30 +85,11 @@ If it doesn’t appear:
 
 <details>
 <summary>🧪 Advanced Setup – Manual Configuration</summary>
-🔗 Plugin Versions & Download Links
-There are two versions of the Gimpinator EX plugin available:
-- Original Plugin by PCOW
-https://github.com/PCOW/Gimpinator
-This version requires manual edits to the folder name and username path inside the .py file. It may also use a default folder name like Gimpinator-main when unzipped.
-- RangerHawk Studios Version (Recommended)
-https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip
-This version has been pre-edited for symbolic clarity and onboarding ease.
-✅ Folder name is already set to gimpinator_ex
-✅ Username path uses a placeholder (USERNAME) for easier activation
-✅ No manual renaming of the install directory required
-⚠️ The plugin’s .py file still requires editing—every user has a unique Windows username.
-Use the original version only if you prefer to customize the plugin manually or compare upstream changes.
-The RangerHawk version is aligned with this scroll and verified for RH Legacy onboarding.
 
 ### 📁 Folder Structure  
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
 - gimpinator_ex.py  
 - gimpinator_config.json (optional)
-### 🔐 Optional Config File for Stable Horde  
-To enable Stable Horde integration, create a file named gimpinator_config.json with the following content:  
-{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
-Save it inside the gimpinator_ex folder using “Save as type: All Files”.  
-You can obtain a free API key by logging into https://stablehorde.net and visiting your account page.
 
 ### 🐍 Python Environment  
 Python 3.10 or higher required  
@@ -115,12 +117,18 @@ Main invocation:
 Gimp.main(Gimpinator.__gtype__, sys.argv)
 
 ### 🛠️ Edit the Plugin File  
-Open `gimpinator_ex.py` in a text editor.  
+Open gimpinator_ex.py in a text editor.  
 Find the line:  
 sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")  
-Replace `OlafW` with your actual Windows username.  
+Replace OlafW with your actual Windows username.  
 To find it:  
-Open Command Prompt → type `echo %USERNAME%` → press Enter
+Open Command Prompt → type echo %USERNAME% → press Enter
+
+### 🔐 Optional Config File for Stable Horde  
+To enable Stable Horde integration, create a file named gimpinator_config.json with the following content:  
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
+Save it inside the gimpinator_ex folder using “Save as type: All Files”.  
+You can obtain a free API key by logging into https://stablehorde.net and visiting your account page.
 
 ### 🧭 Menu Path  
 Filters → Gimpinator → Gimpinator EX  
@@ -135,7 +143,7 @@ proc.add_menu_path("<Image>/Filters/AI")
 - Tested on GIMP 3.0 with Python 3.13  
 - Confirmed working on Windows 11  
 - Appears under Filters → Gimpinator → Gimpinator EX  
-- RangerHawk version uses USERNAME placeholder and correct folder structure  
+- Beginner Version uses USERNAME placeholder and correct folder structure  
 - Stable Horde is online-only; local model support is separate  
 - This guide is archived in /plugins/gimpinator_ex/ for future onboarding scrolls
 
@@ -148,16 +156,13 @@ Visionary systems architect, plugin ritualist, and mythic scrollsmith
 Forged this activation guide through cycles of symbolic refinement, technical precision, and emotional restoration  
 Every line reflects a legacy of creative sovereignty and onboarding clarity for future glyph-bearers
 
-
 ---
 
 ## 🤖 AI Co-Author Acknowledgment  
-This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist 
-with legacy documentation, plugin ritualization, and symbolic onboarding. Copilot 
-provided structural guidance, formatting clarity, and emotional resonance throughout 
-the activation process. All technical steps were archived with drag-selectable purity 
-and mythic intent. Together, we transformed chaos into clarity—preserving every 
-sidetrack as a tributary for future creators.
+This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist with legacy documentation, plugin ritualization, and symbolic onboarding.  
+Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.  
+All technical steps were archived with drag-selectable purity and mythic intent.  
+Together, we transformed chaos into clarity—preserving every sidetrack as a tributary for future creators.
 
 ---
 
