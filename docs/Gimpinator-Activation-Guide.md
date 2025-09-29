@@ -40,6 +40,34 @@ The Beginner Version is aligned with this scroll and verified for RH Legacy onbo
 
 ## 📦 Installation Guide
 
+---
+
+### 🧙‍♂️ Extraction Ritual: Preserve Folder Geometry
+
+To maintain the sacred structure of this plugin archive, **do not use WinRAR** for extraction. WinRAR may flatten nested folders or misplace symbolic overlays, disrupting onboarding clarity and breaking legacy alignment.
+
+✅ Recommended Extraction Methods  
+Use one of the following tools to preserve the intended folder hierarchy:
+
+• 🪄 **Windows Default Unzip Utility**  
+  Right-click the ZIP file and choose **“Extract All…”**  
+  This method typically preserves folder structure and is safe for onboarding.
+
+• 🛡️ **7-Zip (Preferred for Legacy Scrolls)**  
+  Download from the official site: https://www.7-zip.org  
+  After installation:  
+  1. Right-click the ZIP file.  
+  2. Select **“7-Zip → Extract to ‘Gimpinator_EX\’”**  
+     This ensures all assets remain bundled within the correct folder.
+
+⚠️ Do *not* use “Extract Here” unless you are certain the archive contains a single folder.  
+Misaligned glyphs and scattered assets may result in onboarding confusion.
+
+🚫 **Avoid WinRAR**  
+WinRAR may extract files without preserving folder geometry, leading to broken overlays, misplaced assets, and onboarding failure. This tool is not compatible with legacy-grade packaging rituals.
+
+---
+
 <details>
 <summary>🧰 Beginner Version</summary>
 
