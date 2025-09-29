@@ -21,7 +21,7 @@ It supports **Stable Horde** (a free, online distributed backend) and **optional
 ## 📦 Installation Guide
 
 <details>
-<summary>🧰 Beginner Setup – RangerHawk Version</summary>
+<summary>🧰 Beginner Version</summary>
 
 ### 1. Download the Plugin  
 Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
@@ -65,6 +65,19 @@ If it doesn’t appear:
 
 <details>
 <summary>🧪 Advanced Setup – Manual Configuration</summary>
+
+🔗 Plugin Versions & Download Links
+There are two versions of the Gimpinator EX plugin available:
+- Original Plugin by PCOW
+https://github.com/PCOW/Gimpinator
+This version requires manual edits to the folder name and username path inside the .py file. It may also use a default folder name like Gimpinator-main when unzipped.
+- RangerHawk Studios Version (Recommended)
+https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip
+This version has been pre-edited for symbolic clarity and onboarding ease.
+✅ Folder name is already set to gimpinator_ex
+✅ Username path uses a placeholder (USERNAME) for easier activation
+✅ No manual renaming required
+Use the original version only if you prefer to customize the plugin manually or compare upstream changes. The RangerHawk version is aligned with this scroll and verified for RH Legacy onboarding.
 
 ### 📁 Folder Structure  
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
