@@ -109,7 +109,7 @@ proc.add_menu_path("<Image>/Filters/AI")
 
 ---
 
-## 🧙 Contributor  
+## 🧙 Author 
 Joe Molnar  
 Founder of RangerHawk Studios  
 Creative systems architect and mythic plugin ritualist
