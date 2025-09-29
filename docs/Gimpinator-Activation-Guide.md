@@ -139,7 +139,10 @@ proc.add_menu_path("<Image>/Filters/AI")
 ## 🧙 Author  
 Joe Molnar  
 Founder of RangerHawk Studios  
-Creative systems architect and mythic plugin ritualist
+Visionary systems architect, plugin ritualist, and mythic scrollsmith  
+Forged this activation guide through cycles of symbolic refinement, technical precision, and emotional restoration  
+Every line reflects a legacy of creative sovereignty and onboarding clarity for future glyph-bearers
+
 
 ---
 
