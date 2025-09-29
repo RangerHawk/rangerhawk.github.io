@@ -22,7 +22,6 @@ It supports **Stable Horde** (a free, online distributed backend) and **optional
 
 <details>
 <summary>🧰 Beginner Version</summary>
-
 ### 1. Download the Plugin  
 Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
 Click to download the ZIP file containing the pre-edited plugin.  
@@ -65,8 +64,6 @@ If it doesn’t appear:
 
 <details>
 <summary>🧪 Advanced Setup – Manual Configuration</summary>
-
-
 🔗 Plugin Versions & Download Links
 There are two versions of the Gimpinator EX plugin available:
 - Original Plugin by PCOW
