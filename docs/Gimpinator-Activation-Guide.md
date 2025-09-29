@@ -74,9 +74,10 @@ https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip
 This version has been pre-edited for symbolic clarity and onboarding ease.
 ✅ Folder name is already set to gimpinator_ex
 ✅ Username path uses a placeholder (USERNAME) for easier activation
-✅ No manual renaming of the install directory requires. The username in the plugiin's .py file still required
-Use the original version only if you prefer to customize the plugin manually or compare upstream changes.
-The RangerHawk version is aligned with this scroll and verified for RH Legacy onboarding.
+✅ No manual renaming of the install directory required. The username in the plugiin's .py file still requires
+editiing however as every user will have a different Windows User Name. Use the original version only if you 
+prefer to customize the plugin manually or compare upstream changes. The RangerHawk version is aligned with 
+this scroll and verified for RH Legacy onboarding.
 
 ### 📁 Folder Structure  
 C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
