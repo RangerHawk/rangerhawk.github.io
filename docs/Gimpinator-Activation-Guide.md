@@ -1,129 +1,134 @@
-<details>
-<summary>🧙‍♂️ Gimpinator EX Plugin for GIMP 3.x – RH Legacy Verified</summary>
+# 🧙‍♂️ Gimpinator EX Plugin for GIMP 3.x  
+Stable Horde Integration • Local Model Ready • RH Legacy Verified  
+Confirmed working on Windows 11 – September 2025
 
-<p><strong>Stable Horde Integration • Local Model Ready • Confirmed on Windows 11 – September 2025</strong></p>
+---
 
-<hr>
+## 🛡️ RH Legacy Crest – Symbolic Activation  
+This plugin scroll was authored by RangerHawk Studios.  
+Every glyph tested. Every sidetrack archived.  
+![RH Legacy Crest](https://rangerhawk.github.io/assets/Crest.png)
 
-<h3>🛡️ RH Legacy Crest – Symbolic Activation</h3>
-<p>This plugin scroll was authored by RangerHawk Studios.<br>
-Every glyph tested. Every sidetrack archived.</p>
-<img src="https://rangerhawk.github.io/assets/Crest.png" alt="RH Legacy Crest">
+---
 
-<hr>
+## 🌱 What Is Gimpinator EX?  
+Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.  
+It supports **Stable Horde** (a free, online distributed backend) and **optional local model scaffolding** via separate tools.  
+**Note:** Stable Horde is an online service. Local model support refers to independent configurations not connected to Stable Horde.
 
-<h3>🌱 What Is Gimpinator EX?</h3>
-<p>Gimpinator EX lets you generate AI images directly inside GIMP using text prompts.<br>
-It supports <strong>Stable Horde</strong> (a free, online distributed backend) and <strong>optional local model scaffolding</strong> via separate tools.<br>
-<em>Note: Stable Horde is an online service. Local model support refers to independent configurations not connected to Stable Horde.</em></p>
+---
 
-<hr>
+## 📦 Installation Guide (Beginner-Friendly)
 
-<h3>📦 Installation Guide (Beginner-Friendly)</h3>
+### 1. Download the Plugin  
+Visit: [RangerHawk Gimpinator EX ZIP](https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip)  
+Click to download the ZIP file containing the pre-edited plugin.  
+No renaming or manual edits required. Folder structure and username references are already corrected.
 
-<details>
-<summary>🧰 Beginner Setup – RangerHawk Version</summary>
+### 2. Unzip and Move  
+Extract to:  
+C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\  
+Confirm files:  
+- gimpinator_ex.py  
+- gimpinator_config.json (optional)
 
-<ol>
-<li><strong>Download the Plugin</strong><br>
-<a href="https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip">RangerHawk Gimpinator EX ZIP</a><br>
-No renaming or manual edits required. Folder structure and username references are already corrected.</li>
+### 3. Check File Permissions  
+Right-click each plugin file → Properties  
+- Uncheck “Read-only”  
+- Click “Unblock” if present  
+Apply and repeat for all `.py` files.
 
-<li><strong>Unzip and Move</strong><br>
-Extract to:<br>
-<code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\</code><br>
-Confirm files:<br>
-<ul>
-<li>gimpinator_ex.py</li>
-<li>gimpinator_config.json (optional)</li>
-</ul></li>
+### 4. Create Config File (Optional for Stable Horde)  
+To use Stable Horde, get a free API key:  
+- Go to https://stablehorde.net  
+- Log in via Discord, GitHub, etc.  
+- Click your username → Account → Copy your API key
 
-<li><strong>Check File Permissions</strong><br>
-Right-click each file → Properties<br>
-Uncheck “Read-only” and click “Unblock” if present.</li>
+Create a file named `gimpinator_config.json` with this content:  
+{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }  
+Save it inside the plugin folder using “Save as type: All Files”.
 
-<li><strong>Create Config File (Optional)</strong><br>
-Get a Stable Horde API key:<br>
-<a href="https://stablehorde.net">https://stablehorde.net</a><br>
-Create <code>gimpinator_config.json</code> with:<br>
-<pre>{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }</pre></li>
+### 5. Install Python  
+Go to https://www.python.org/downloads/  
+Install Python 3.10 or higher  
+Check “Add Python to PATH” during setup  
+Open Command Prompt → type `where python`  
+If it doesn’t appear:  
+- Reinstall Python  
+- Ensure PATH is set  
+- Restart your computer
 
-<li><strong>Install Python</strong><br>
-<a href="https://www.python.org/downloads/">Download Python 3.10+</a><br>
-Check “Add Python to PATH” during setup.<br>
-Use <code>where python</code> in Command Prompt to verify.</li>
-</ol>
-</details>
+---
 
-<hr>
+## 🧠 Advanced Activation Guide
 
-<h3>🧠 Advanced Activation Guide</h3>
+### 📁 Folder Structure  
+C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex  
+- gimpinator_ex.py  
+- gimpinator_config.json (optional)
 
-<details>
-<summary>🧪 Expert Setup – Manual Configuration</summary>
+### 🐍 Python Environment  
+Python 3.10 or higher required  
+Install dependencies:  
+pip install requests pillow PyGObject  
+Optional for local model scaffolding:  
+pip install diffusers transformers torch accelerate
 
-<ul>
-<li><strong>Folder Structure</strong><br>
-<code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex</code></li>
+### ⚙️ Plugin Script Requirements  
+Start of file:  
+#!/usr/bin/env python3
 
-<li><strong>Python Environment</strong><br>
-<code>pip install requests pillow PyGObject</code><br>
-Optional:<br>
-<code>pip install diffusers transformers torch accelerate</code></li>
-
-<li><strong>Plugin Script Requirements</strong><br>
-Start of file:<br>
-<code>#!/usr/bin/env python3</code><br>
-Required imports:<br>
-<pre>
+Required imports:  
 import gi  
 gi.require_version("Gimp", "3.0")  
 from gi.repository import Gimp, GimpUi, GObject, GLib, Gio, Gtk  
 import sys, os, json
-</pre>
-Plugin class:<br>
-<pre>
+
+Plugin class:  
 class Gimpinator(Gimp.PlugIn):  
     def do_query_procedures(self):  
         return ["plug-in-gimpinator-ex"]
-</pre>
-Main invocation:<br>
-<code>Gimp.main(Gimpinator.__gtype__, sys.argv)</code></li>
 
-<li><strong>Menu Path</strong><br>
-Filters → Gimpinator → Gimpinator EX<br>
-Optional:<br>
-<code>proc.add_menu_path("&lt;Image&gt;/Filters/AI")</code></li>
-</ul>
-</details>
+Main invocation:  
+Gimp.main(Gimpinator.__gtype__, sys.argv)
 
-<hr>
+### 🧭 Menu Path  
+Filters → Gimpinator → Gimpinator EX  
+Optional grouping:  
+proc.add_menu_path("<Image>/Filters/AI")
 
-<h3>🧾 Notes</h3>
-<ul>
-<li>Tested on GIMP 3.0 with Python 3.13</li>
-<li>Confirmed working on Windows 11</li>
-<li>Appears under Filters → Gimpinator → Gimpinator EX</li>
-<li>RangerHawk version uses USERNAME placeholder and correct folder structure</li>
-<li>Stable Horde is online-only; local model support is separate</li>
-<li>This guide is archived in <code>/plugins/gimpinator_ex/</code></li>
-</ul>
+---
 
-<hr>
+## 🧾 Notes  
+- Tested on GIMP 3.0 with Python 3.13  
+- Confirmed working on Windows 11  
+- Appears under Filters → Gimpinator → Gimpinator EX  
+- RangerHawk version uses USERNAME placeholder and correct folder structure  
+- Stable Horde is online-only; local model support is separate  
+- This guide is archived in /plugins/gimpinator_ex/ for future onboarding scrolls
 
-<h3>🧙 Contributor</h3>
-<p>Joe Molnar<br>
-Founder of RangerHawk Studios<br>
-Creative systems architect and mythic plugin ritualist</p>
+---
 
-<hr>
+## 🧙 Contributor  
+Joe Molnar  
+Founder of RangerHawk Studios  
+Creative systems architect and mythic plugin ritualist
 
-<h3>🪶 RH Legacy Footer</h3>
-<p>This scroll was forged in the legacy archive of RangerHawk Studios.<br>
-Every plugin tested. Every sidetrack preserved.<br>
-May it guide future creators toward prompt invocation and plugin sovereignty.</p>
+---
 
-<p>This scroll was co-forged using AI assistance, but the structure, sequence, and symbolic intent are authored by Joe Molnar of RangerHawk Studios.<br>
-Every step reflects a larger vision of mythic onboarding and creative sovereignty.</p>
+## 🤖 AI Co-Author Acknowledgment  
+This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist with legacy documentation, plugin ritualization, and symbolic onboarding.  
+Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.  
+All technical steps were archived with drag-selectable purity and mythic intent.
 
-</details>
+Together, we transformed chaos into clarity—preserving every sidetrack as a tributary for future creators.
+
+---
+
+## 🪶 RH Legacy Footer  
+This scroll was forged in the legacy archive of RangerHawk Studios.  
+Every plugin tested. Every sidetrack preserved.  
+May it guide future creators toward prompt invocation and plugin sovereignty.
+
+This scroll was co-forged using AI assistance, but the structure, sequence, and symbolic intent are authored by Joe Molnar of RangerHawk Studios.  
+Every step reflects a larger vision of mythic onboarding and creative sovereignty.
