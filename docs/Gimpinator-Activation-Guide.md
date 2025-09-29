@@ -66,6 +66,7 @@ If it doesn’t appear:
 <details>
 <summary>🧪 Advanced Setup – Manual Configuration</summary>
 
+
 🔗 Plugin Versions & Download Links
 There are two versions of the Gimpinator EX plugin available:
 - Original Plugin by PCOW
