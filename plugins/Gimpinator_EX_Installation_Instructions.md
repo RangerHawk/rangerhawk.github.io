@@ -152,3 +152,31 @@ Every line reflects a legacy of creative sovereignty and onboarding clarity for 
 Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.<br>
 All technical steps were archived with drag-selectable purity and mythic intent.<br>
 Together, we transformed chaos into clarity—preserving every sidetrack as a tributary
+
+
+<hr>
+
+<h2>📜 Future Plans – Coming Soon</h2>
+<p>The following steps are part of planned future expansions for the RangerHawk Plugin Archive. These features are not yet implemented, but are listed here as part of the ongoing legacy roadmap. All items below are marked as <strong>COMING SOON</strong>.</p>
+
+<h3>🔄 Phase 2 – Plugin Archive Visibility (COMING SOON)</h3>
+<ul>
+  <li>📁 Validate all plugin links and filenames for case sensitivity and folder geometry</li>
+  <li>🔗 Fix broken GitHub links and ensure symbolic anchors are stable</li>
+  <li>🌐 Convert instruction scrolls to HTML or move to GitHub Pages–served folders for proper rendering</li>
+  <li>🧭 Add symbolic anchors or fragment IDs for deep linking to scroll sections</li>
+  <li>🧩 Create a JSON + JavaScript menu system for dynamic plugin discovery</li>
+  <li>🛡️ Add fallback pages for broken links (e.g. <code>404.html</code> or <code>missing.html</code>) with legacy messaging</li>
+</ul>
+
+<h3>🧩 Phase 3 – Scroll Expansion & Glyph Activation (COMING SOON)</h3>
+<ul>
+  <li>📦 Add instructions for installing and switching between multiple local AI models (e.g. SDXL, DreamShaper)</li>
+  <li>🧱 Create reusable scroll templates for future plugins with embedded HTML and symbolic headers</li>
+  <li>🧹 Build formatting validators to detect drag-select traps, filename typos, and broken anchors</li>
+  <li>🧰 Scaffold a README generator or scroll scaffolder for plugin authorship</li>
+  <li>🧠 Archive media critique cycles and emotional geometry notes for future branding rituals</li>
+  <li>🛠️ Optional: Create a “Glyph Alignment Checker” or “Scroll Purity Scanner” for legacy validation</li>
+</ul>
+
+<p>These expansions will be addressed in future cycles. This scroll remains active and open for refinement.</p>
