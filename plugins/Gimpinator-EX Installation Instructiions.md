@@ -93,65 +93,66 @@ If you plan to use local AI models, run this additional command:</p>
 <hr>
 
 <details>
-  <summary><strong>🧰 Beginner Version – Simplified Setup</strong></summary>
-  <ol>
-    <li>Download the plugin ZIP:<br>
-      <a href="https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip">Gimpinator-EX.zip</a>
-    </li>
-    <li>Extract to:<br>
-      <code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\</code>
-    </li>
-    <li>Confirm files:<br>
-      <code>gimpinator_ex.py</code><br>
-      <code>gimpinator_config.json</code> (optional)
-    </li>
-    <li>Plugin appears in GIMP under:<br>
-      <code>Filters → Gimpinator → Gimpinator EX</code>
-    </li>
-  </ol>
+  <summary><strong>🧰 Beginner Version – Final Activation</strong></summary>
+  <p>Once you've completed the Core Setup and placed the plugin folder correctly:</p>
+  <ul>
+    <li>Open GIMP</li>
+    <li>Go to <strong>Filters → Gimpinator → Gimpinator EX</strong></li>
+    <li>Enter a simple prompt like <code>“a glowing crystal in a forest”</code></li>
+    <li>Click <strong>Generate</strong> to test your first image</li>
+  </ul>
+  <p>If an image appears, your plugin is working! You’ve completed the Beginner path.</p>
 </details>
 
 <details>
-  <summary><strong>🧪 Advanced Setup – Manual Configuration</strong></summary>
-  <ol>
-    <li>Folder structure:<br>
-      <code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\gimpinator_ex</code><br>
-      Includes:<br>
-      <code>gimpinator_ex.py</code><br>
-      <code>gimpinator_config.json</code> (optional)
-    </li>
-    <li>Plugin script requirements:<br>
-      Start of file:<br>
-      <code>#!/usr/bin/env python3</code><br>
-      Required imports:<br>
-      <code>import gi</code><br>
-      <code>gi.require_version("Gimp", "3.0")</code><br>
-      <code>from gi.repository import Gimp, GimpUi, GObject, GLib, Gio, Gtk</code><br>
-      <code>import sys, os, json</code>
-    </li>
-    <li>Plugin class:<br>
-      <code>
-      class Gimpinator(Gimp.PlugIn):<br>
-          def do_query_procedures(self):<br>
-              return ["plug-in-gimpinator-ex"]<br>
-      Gimp.main(Gimpinator.__gtype__, sys.argv)
-      </code>
-    </li>
-    <li>Edit the plugin file:<br>
-      Open <code>gimpinator_ex.py</code> in a text editor<br>
-      Find:<br>
+  <summary><strong>🧪 Advanced Setup – Final Activation</strong></summary>
+  <p>After completing Core Setup and editing the plugin script manually:</p>
+  <ul>
+    <li>Open <code>gimpinator_ex.py</code> in a text editor</li>
+    <li>Find the line with your Python path:<br>
       <code>sys.path.append(r"C:\Users\OlafW\AppData\Local\Programs\Python\Python313\Lib\site-packages")</code><br>
-      Replace <code>OlafW</code> with your actual Windows username<br>
-      To find it:<br>
-      Open Command Prompt → type <code>echo %USERNAME%</code>
+      Replace <code>OlafW</code> with your actual Windows username:<br>
+      <code>echo %USERNAME%</code> in Command Prompt
     </li>
-    <li>Optional grouping:<br>
-      <code>proc.add_menu_path("&lt;Image&gt;/Filters/AI")</code>
-    </li>
-  </ol>
+    <li>Open GIMP</li>
+    <li>Go to <strong>Filters → Gimpinator → Gimpinator EX</strong></li>
+    <li>Enter a prompt like <code>“a futuristic city skyline at sunset”</code></li>
+    <li>Click <strong>Generate</strong> to test your first image</li>
+  </ul>
+  <pIf the image appears, your plugin is activated. You’ve completed the Advanced path.</p>
 </details>
 
 <hr>
+
+<h2>🧾 Notes</h2>
+<ul>
+  <li>✅ Tested on GIMP 3.0 with Python 3.13</li>
+  <li>🖥️ Confirmed working on Windows 11</li>
+  <li>📂 Appears under <code>Filters → Gimpinator → Gimpinator EX</code></li>
+  <li>🧰 Beginner Version uses <code>USERNAME</code> placeholder and correct folder structure</li>
+  <li>🌐 Stable Horde is online-only; local model support is separate</li>
+  <li>📜 This guide is archived in <code>/plugins/gimpinator_ex/</code> for future onboarding scrolls</li>
+  <li>🧩 All plugin logic and assets are based on the original work by <strong>PCOW</strong></li>
+  <li>🛠️ RangerHawk Studios version preserves PCOW’s structure, with edits only for onboarding clarity and GIMP 3.x compatibility</li>
+</ul>
+
+<hr>
+
+<h2>🧙 Author</h2>
+<p><strong>Joe Molnar</strong><br>
+Founder of RangerHawk Studios<br>
+Visionary systems architect, plugin ritualist, and mythic scrollsmith<br>
+Forged this activation guide through cycles of symbolic refinement, technical precision, and emotional restoration.<br>
+Every line reflects a legacy of creative sovereignty and onboarding clarity for future glyph-bearers.</p>
+
+<hr>
+
+<h2>🤖 AI Co-Author Acknowledgment</h2>
+<p>This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist with legacy documentation, plugin ritualization, and symbolic onboarding.<br>
+Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.<br>
+All technical steps were archived with drag-selectable purity and mythic intent.<br>
+Together, we transformed chaos into clarity—preserving every sidetrack as a tributary
+
 
 <h2>🧾 Notes</h2>
 <ul>
