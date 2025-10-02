@@ -152,13 +152,3 @@ Every line reflects a legacy of creative sovereignty and onboarding clarity for 
 Copilot provided structural guidance, formatting clarity, and emotional resonance throughout the activation process.<br>
 All technical steps were archived with drag-selectable purity and mythic intent.<br>
 Together, we transformed chaos into clarity—preserving every sidetrack as a tributary
-
-
-<h2>🧾 Notes</h2>
-<ul>
-  <li>✅ Tested on GIMP 3.0 with Python 3.13</li>
-  <li>🖥️ Confirmed working on Windows 11</li>
-  <li>📂 Appears under <code>Filters → Gimpinator → Gimpinator EX</code></li>
-  <li>🧰 Beginner Version uses <code>USERNAME</code> placeholder and correct folder structure</li>
-  <li>🌐 Stable Horde is online-only; local model support is separate</li>
-  <li>📜 This guide is archived in <code>/plugins/g
