@@ -1,31 +1,83 @@
-<h1>🧙‍♂️ Gimpinator EX Plugin for GIMP 3.x</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gimpinator EX Activation Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #444;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    hr {
+      margin: 2em 0;
+    }
+    .emoji {
+      display: inline-block;
+      animation: pulse 2s infinite;
+      transform-origin: center;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .crest {
+      width: 120px;
+      display: block;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<img src="https://raw.githubusercontent.com/RangerHawk/Gimpinator-EX-Gimp-3/main/assets/rangerhawk_crest.png" alt="RangerHawk Studios Crest" class="crest">
+
+<h1><span class="emoji">🧙‍♂️</span> Gimpinator EX Plugin for GIMP 3.x</h1>
 <p><strong>Stable Horde Integration • Local Model Ready • RH Legacy Verified</strong><br>
 Confirmed working on Windows 11 – October 2025</p>
 
 <hr>
 
-<h2>🌱 What Is Gimpinator EX?</h2>
+<h2><span class="emoji">🌱</span> What Is Gimpinator EX?</h2>
 <p>Gimpinator EX is a next-generation AI image generation plugin for GIMP 3.x.<br>
 It connects your canvas to AI art models like Stable Diffusion, letting you generate stunning visuals directly inside GIMP—no browser, no separate tools, just raw creative force.</p>
 
 <ul>
-  <li>🎨 Direct text-to-image AI generation</li>
-  <li>🧬 Built-in support for models like SDXL, DreamShaper, and more</li>
-  <li>🛠️ Configurable resolution, prompt strength (CFG), and generation steps</li>
-  <li>🔄 Smart timeouts and request handling</li>
-  <li>🎛️ Seamless integration with Stable Horde or your own AI backend</li>
+  <li><span class="emoji">🎨</span> Direct text-to-image AI generation</li>
+  <li><span class="emoji">🧬</span> Built-in support for models like SDXL, DreamShaper, and more</li>
+  <li><span class="emoji">🛠️</span> Configurable resolution, prompt strength (CFG), and generation steps</li>
+  <li><span class="emoji">🔄</span> Smart timeouts and request handling</li>
+  <li><span class="emoji">🎛️</span> Seamless integration with Stable Horde or your own AI backend</li>
 </ul>
 
 <hr>
 
-<h2>🚀 Installation</h2>
+<h2><span class="emoji">🚀</span> Installation</h2>
 <p>This version is pre-packaged for symbolic clarity and onboarding ease.<br>
 No folder renaming. No manual edits. Just unzip and activate.</p>
 
-<h3>📦 Step 1: Download the Plugin</h3>
+<h3><span class="emoji">📦</span> Step 1: Download the Plugin</h3>
 <p><a href="https://raw.githubusercontent.com/RangerHawk/Gimpinator-EX-Gimp-3/main/gimpinator_ex.zip" download="Gimpinator-EX.zip">Download Gimpinator EX</a> <span style="font-size: 0.9em; color: gray;">(autodownloads when clicked)</span></p>
 
-<h3>📁 Step 2: Place the Folder</h3>
+<h3><span class="emoji">📁</span> Step 2: Place the Folder</h3>
 <p>Unzip the file and place the folder <code>gimpinator_ex</code> into your GIMP plug-ins directory:</p>
 <ul>
   <li><strong>Windows:</strong> <code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\</code></li>
@@ -35,7 +87,7 @@ No folder renaming. No manual edits. Just unzip and activate.</p>
 <p>✅ The plugin’s Python file uses <code>USERNAME</code> as a placeholder.<br>
 ✅ The folder name is already correct—no renaming required.</p>
 
-<h3>🔐 Step 3: Check File Permissions</h3>
+<h3><span class="emoji">🔐</span> Step 3: Check File Permissions</h3>
 <ol>
   <li>Right-click <code>gimpinator_ex.py</code> → Properties</li>
   <li>Uncheck “Read-only”</li>
@@ -43,22 +95,33 @@ No folder renaming. No manual edits. Just unzip and activate.</p>
   <li>Click Apply</li>
 </ol>
 
-<h3>🐍 Step 4: Install Python</h3>
+<h3><span class="emoji">🐍</span> Step 4: Install Python</h3>
 <ol>
   <li>Go to <a href="https://www.python.org/downloads/">python.org/downloads</a></li>
   <li>Download Python version <strong>3.10 or higher</strong></li>
   <li>During installation, check the box:<br> ✅ “Add Python to PATH”</li>
-  <li>After installation, open Command Prompt and type:<br> <code>where python</code></li>
+  <li>Click “Customize installation” and ensure <code>pip</code> and <code>Scripts</code> are included</li>
+  <li>After installation, open Command Prompt and run:
+    <ul>
+      <li><code>python --version</code></li>
+      <li><code>where python</code></li>
+      <li><code>echo %PATH%</code></li>
+    </ul>
+  </li>
+  <li>Confirm that two Python-related paths are listed:
+    <ul>
+      <li>Install directory (e.g. <code>C:\Users\YourName\AppData\Local\Programs\Python\Python311</code>)</li>
+      <li>Scripts subdirectory (e.g. <code>C:\Users\YourName\AppData\Local\Programs\Python\Python311\Scripts</code>)</li>
+    </ul>
+  </li>
+  <li>If only one path is listed, uninstall Python and reinstall with the PATH checkbox enabled</li>
 </ol>
 
-<h3>📦 Step 5: Install Required Packages</h3>
+<h3><span class="emoji">📦</span> Step 5: Install Required Packages</h3>
 <p>Open Command Prompt and run:</p>
 <pre><code>pip install requests pillow PyGObject</code></pre>
 
-<p><strong>Optional: Local Model Support</strong><br>
-Coming soon — this section will include setup instructions for SDXL, DreamShaper, and other local models.</p>
-
-<h3>🧪 Step 6: Activate Your API Key</h3>
+<h3><span class="emoji">🧪</span> Step 6: Activate Your API Key</h3>
 <p>This version includes a pre-placed config file: <code>gimpinator_config.json</code></p>
 <ol>
   <li>Visit <a href="https://stablehorde.net">Stable Horde</a></li>
@@ -74,7 +137,7 @@ Just paste your key and save.</p>
 
 <hr>
 
-<h2>🧠 How to Generate AI Images</h2>
+<h2><span class="emoji">🧠</span> How to Generate AI Images</h2>
 <ol>
   <li>Open GIMP</li>
   <li>Go to <strong>Filters → Gimpinator → Gimpinator EX</strong></li>
@@ -87,7 +150,7 @@ Just paste your key and save.</p>
 
 <hr>
 
-<h2>🔧 Backend Settings</h2>
+<h2><span class="emoji">🔧</span> Backend Settings</h2>
 <p>You can configure custom AI sources by editing the backend list or patching the default to accept:</p>
 <ul>
   <li>Stable Diffusion APIs</li>
@@ -97,35 +160,11 @@ Just paste your key and save.</p>
 
 <hr>
 
-<h2>🧙‍♂️ Troubleshooting</h2>
+<h2><span class="emoji">🧙‍♂️</span> Troubleshooting</h2>
 <ul>
   <li>If the plugin doesn’t appear, run GIMP from a terminal to view logs:</li>
   <li><strong>Windows:</strong> Press Win + R → type <code>cmd</code> → run <code>gimp</code></li>
   <li>Check for Python errors or missing packages</li>
   <li>Ensure your plugin folder is named <code>gimpinator_ex</code> and contains the correct files</li>
-</ul>
-
-<hr>
-
-<h2>🧾 Notes</h2>
-<ul>
-  <li>✅ Tested on GIMP 3.0 with Python 3.13</li>
-  <li>🖥️ Confirmed working on Windows 11</li>
-  <li>📂 Appears under <code>Filters → Gimpinator → Gimpinator EX</code></li>
-  <li>📜 This guide is archived in <code>/plugins/gimpinator_ex/</code> for future onboarding scrolls</li>
-  <li>🧩 Based on original work by <strong>PCOW</strong>, refined by RangerHawk Studios</li>
-</ul>
-
-<hr>
-
-<h2>🧙 Author</h2>
-<p><strong>Joe Molnar</strong><br>
-Founder of RangerHawk Studios<br>
-Visionary systems architect, plugin ritualist, and mythic scrollsmith<br>
-Forged this activation guide through cycles of symbolic refinement, technical precision, and emotional restoration.</p>
-
-<hr>
-
-<h2>🤖 AI Co-Author Acknowledgment</h2>
-<p>This scroll was co-forged with Microsoft Copilot, an AI companion designed to assist with legacy documentation, plugin ritualization, and symbolic onboarding.<br>
-Together, we transformed chaos into clarity—preserving every sidetrack as a tributary.</p>
+  <li>Confirm Python path includes both install and Scripts directories</li>
+  <li>Reinstall Python if <code>pip install</
