@@ -81,7 +81,7 @@ If you plan to use local AI models, run this additional command:</p>
     It may also unzip as <code>Gimpinator-main</code>.
   </li>
   <li><strong>Beginner Version (Recommended)</strong><br>
-    <a href="https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip">https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip</a><br>
+    <a href="https://github.com/RangerHawk/Gimpinator-EX-Gimp3">https://rangerhawk.github.io/plugins/gimpinator_ex/Gimpinator-EX.zip</a><br>
     This version has been pre-edited for symbolic clarity and onboarding ease.<br>
     ✅ Folder name is already set to <code>gimpinator_ex</code><br>
     ✅ Username path uses a placeholder (<code>USERNAME</code>) for easier activation<br>
