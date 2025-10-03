@@ -11,14 +11,15 @@
       max-width: 800px;
       margin: auto;
       padding: 2em;
-      background-color: #fdfdfd;
-      color: #222;
+      background-color: #121212;
+      color: #eee;
+      transition: background-color 0.3s, color 0.3s;
     }
     h1, h2, h3 {
-      color: #444;
+      color: #f0f0f0;
     }
     code {
-      background-color: #eee;
+      background-color: #333;
       padding: 2px 4px;
       border-radius: 4px;
     }
@@ -27,6 +28,7 @@
     }
     hr {
       margin: 2em 0;
+      border-color: #444;
     }
     .emoji {
       display: inline-block;
@@ -43,6 +45,19 @@
       display: block;
       margin: auto;
       margin-bottom: 1em;
+    }
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      z-index: 999;
     }
   </style>
 </head>
@@ -155,16 +170,4 @@ Just paste your key and save.</p>
 <ul>
   <li>Stable Diffusion APIs</li>
   <li>Personal Horde worker URLs</li>
-  <li>Private model endpoints (with API key authentication)</li>
-</ul>
-
-<hr>
-
-<h2><span class="emoji">🧙‍♂️</span> Troubleshooting</h2>
-<ul>
-  <li>If the plugin doesn’t appear, run GIMP from a terminal to view logs:</li>
-  <li><strong>Windows:</strong> Press Win + R → type <code>cmd</code> → run <code>gimp</code></li>
-  <li>Check for Python errors or missing packages</li>
-  <li>Ensure your plugin folder is named <code>gimpinator_ex</code> and contains the correct files</li>
-  <li>Confirm Python path includes both install and Scripts directories</li>
-  <li>Reinstall Python if <code>pip install</
+  <
