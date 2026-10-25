@@ -2,50 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🧰 RangerHawk Plugin Archive</title>
+  <title>Plugin Archive — RangerHawk Studios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
   <style>
+    :root { --bg:#0b0b0d; --fg:#eaeaea; --muted:#9a9a9a; --accent:#4fd1c5; --card:#161619; --border:#2a2a2e; }
+    * { box-sizing: border-box; }
     body {
-      font-family: sans-serif;
-      background-color: #111;
-      color: #eee;
-      padding: 2em;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      max-width: 760px;
+      margin: auto;
+      padding: 2.5em 1.5em;
+      line-height: 1.6;
     }
-    h1 {
-      color: #00ffff;
+    h1 { margin-bottom: 0.2em; }
+    p.tagline { color: var(--muted); margin-top: 0; }
+    a { color: var(--accent); }
+    .plugin-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2em 1.4em;
+      margin: 1.5em 0;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 1em 0;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .note {
-      margin-top: 2em;
-      font-size: 0.9em;
-      opacity: 0.7;
-    }
+    .plugin-card h2 { margin-top: 0; font-size: 1.2em; }
+    .plugin-card .links { margin-top: 0.8em; }
+    .plugin-card .links a { display: inline-block; margin-right: 1.5em; }
+    .back { display: inline-block; margin-top: 1.5em; color: var(--muted); font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <h1>🧰 RangerHawk Plugin Archive</h1>
-<details>
-  <summary>🔗 Gimpinator EX Plugin</summary>
-  <p>A legacy-grade plugin for GIMP that automates ritualized image transformations. Includes symbolic overlays, batch glyph processing, and emotional geometry alignment.</p>
-  <a href="gimpinator_ex.zip" download>🗜️ Download Gimpinator EX</a><br>
-  <a href="https://github.com/RangerHawk/rangerhawk.github.io/blob/main/plugins/Gimpinator_EX_Installation_Instructions.md" target="_blank">📜 Installation Instructions (GitHub View)</a>
-</details>
-  <div class="note">
-    Each plugin is sealed with folder geometry and onboarding clarity.<br>
-    To add more, copy a line and update the filename and label.
+  <h1>Plugin Archive</h1>
+  <p class="tagline">Free tools for GIMP and other creative software, built by RangerHawk Studios.</p>
+
+  <div class="plugin-card">
+    <h2>Gimpinator EX — GIMP 3.x Plugin</h2>
+    <p>Generate AI images directly inside GIMP, from a text prompt, using Stable Horde (free) or a local image-generation server.</p>
+    <div class="links">
+      <a href="gimpinator_ex.zip" download>Download Gimpinator EX (.zip)</a>
+      <a href="Gimpinator_EX_Installation_Instructions.html">Installation instructions</a>
+      <a href="https://github.com/RangerHawk/Gimpinator-EX-Gimp-3">Source on GitHub</a>
+    </div>
   </div>
+
+  <a class="back" href="/">&larr; Back to RangerHawk Studios</a>
 </body>
 </html>

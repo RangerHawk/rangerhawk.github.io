@@ -2,172 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gimpinator EX Activation Guide</title>
+  <title>Gimpinator EX — Installation Instructions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
   <style>
+    :root { --bg:#0b0b0d; --fg:#eaeaea; --muted:#9a9a9a; --accent:#4fd1c5; --card:#161619; --border:#2a2a2e; }
+    * { box-sizing: border-box; }
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 800px;
+      max-width: 760px;
       margin: auto;
-      padding: 2em;
-      background-color: #121212;
-      color: #eee;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 2.5em 1.5em 4em;
+      background: var(--bg);
+      color: var(--fg);
     }
-    h1, h2, h3 {
-      color: #f0f0f0;
-    }
+    h1, h2, h3 { color: var(--fg); }
+    h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+    .subtitle { color: var(--muted); margin-top: 0; }
+    a { color: var(--accent); }
     code {
-      background-color: #333;
-      padding: 2px 4px;
+      background: var(--card);
+      padding: 2px 6px;
       border-radius: 4px;
+      font-size: 0.92em;
     }
-    ul {
-      padding-left: 1.2em;
+    pre {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1em;
+      overflow-x: auto;
     }
-    hr {
-      margin: 2em 0;
-      border-color: #444;
+    pre code { background: none; padding: 0; }
+    ul, ol { padding-left: 1.4em; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+    .note {
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+      padding: 0.8em 1em;
+      border-radius: 4px;
+      margin: 1em 0;
     }
-    .emoji {
-      display: inline-block;
-      animation: pulse 2s infinite;
-      transform-origin: center;
-    }
-    @keyframes pulse {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.15); }
-      100% { transform: scale(1); }
-    }
-    .crest {
-      width: 120px;
-      display: block;
-      margin: auto;
-      margin-bottom: 1em;
-    }
-    .theme-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #444;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9em;
-      z-index: 999;
-    }
+    .back { display: inline-block; margin-top: 2em; color: var(--muted); font-size: 0.9em; }
   </style>
 </head>
 <body>
 
-<img src="https://raw.githubusercontent.com/RangerHawk/Gimpinator-EX-Gimp-3/main/assets/rangerhawk_crest.png" alt="RangerHawk Studios Crest" class="crest">
+<h1>Gimpinator EX — Installation Instructions</h1>
+<p class="subtitle">GIMP 3.x plugin · rebuilt and corrected 24 Oct 2026</p>
 
-<h1><span class="emoji">🧙‍♂️</span> Gimpinator EX Plugin for GIMP 3.x</h1>
-<p><strong>Stable Horde Integration • Local Model Ready • RH Legacy Verified</strong><br>
-Confirmed working on Windows 11 – October 2025</p>
-
-<hr>
-
-<h2><span class="emoji">🌱</span> What Is Gimpinator EX?</h2>
-<p>Gimpinator EX is a next-generation AI image generation plugin for GIMP 3.x.<br>
-It connects your canvas to AI art models like Stable Diffusion, letting you generate stunning visuals directly inside GIMP—no browser, no separate tools, just raw creative force.</p>
-
+<h2>What it does</h2>
+<p>Gimpinator EX lets you generate AI images directly inside GIMP from a text prompt. It supports two backends:</p>
 <ul>
-  <li><span class="emoji">🎨</span> Direct text-to-image AI generation</li>
-  <li><span class="emoji">🧬</span> Built-in support for models like SDXL, DreamShaper, and more</li>
-  <li><span class="emoji">🛠️</span> Configurable resolution, prompt strength (CFG), and generation steps</li>
-  <li><span class="emoji">🔄</span> Smart timeouts and request handling</li>
-  <li><span class="emoji">🎛️</span> Seamless integration with Stable Horde or your own AI backend</li>
+  <li><strong>Stable Horde</strong> — free, community-run, just needs an API key.</li>
+  <li><strong>Local</strong> — advanced; needs your own image-generation server already running on your machine.</li>
 </ul>
 
 <hr>
 
-<h2><span class="emoji">🚀</span> Installation</h2>
-<p>This version is pre-packaged for symbolic clarity and onboarding ease.<br>
-No folder renaming. No manual edits. Just unzip and activate.</p>
+<h2>Installation</h2>
 
-<h3><span class="emoji">📦</span> Step 1: Download the Plugin</h3>
-<p><a href="https://raw.githubusercontent.com/RangerHawk/Gimpinator-EX-Gimp-3/main/gimpinator_ex.zip" download="Gimpinator-EX.zip">Download Gimpinator EX</a> <span style="font-size: 0.9em; color: gray;">(autodownloads when clicked)</span></p>
+<h3>1. Download the plugin</h3>
+<p><a href="gimpinator_ex.zip" download>Download gimpinator_ex.zip</a></p>
 
-<h3><span class="emoji">📁</span> Step 2: Place the Folder</h3>
-<p>Unzip the file and place the folder <code>gimpinator_ex</code> into your GIMP plug-ins directory:</p>
+<h3>2. Unzip and move it into place</h3>
+<p>Extract the ZIP to your GIMP plug-ins folder:</p>
 <ul>
-  <li><strong>Windows:</strong> <code>C:\Users\USERNAME\AppData\Roaming\GIMP\3.0\plug-ins\</code></li>
-  <li><strong>Linux/macOS:</strong> <code>~/.config/GIMP/3.0/plug-ins/</code></li>
+  <li><strong>Windows:</strong> <code>C:\Users\&lt;YourUsername&gt;\AppData\Roaming\GIMP\3.0\plug-ins</code></li>
+  <li><strong>Linux / macOS:</strong> <code>~/.config/GIMP/3.0/plug-ins/</code></li>
+</ul>
+<p>This creates a folder named <code>gimpinator_ex</code> inside the plug-ins folder. Keep that exact folder name — GIMP needs it to find the plugin.</p>
+<p>Inside that folder you should have:</p>
+<ul>
+  <li><code>gimpinator_ex.py</code></li>
+  <li><code>gimpinator_config.json</code> (optional)</li>
 </ul>
 
-<p>✅ The plugin’s Python file uses <code>USERNAME</code> as a placeholder.<br>
-✅ The folder name is already correct—no renaming required.</p>
+<div class="note">
+  The plugin finds its own files automatically — you do not need to open <code>gimpinator_ex.py</code> or edit anything by hand.
+</div>
 
-<h3><span class="emoji">🔐</span> Step 3: Check File Permissions</h3>
+<h3>3. Unblock the files (Windows)</h3>
+<p>Right-click each file → Properties → uncheck "Read-only" → click "Unblock" if that button is there → Apply. Do this for every file in the folder. Windows sometimes flags downloaded files as untrusted, which can quietly stop GIMP from loading them.</p>
+
+<h3>4. Get a free Stable Horde API key</h3>
 <ol>
-  <li>Right-click <code>gimpinator_ex.py</code> → Properties</li>
-  <li>Uncheck “Read-only”</li>
-  <li>Click “Unblock” if present</li>
-  <li>Click Apply</li>
+  <li>Go to <a href="https://stablehorde.net">stablehorde.net</a></li>
+  <li>Click "Login" (top right) and sign in with Discord, GitHub, or another method</li>
+  <li>Click your username, then "Account"</li>
+  <li>Copy your API key from there</li>
 </ol>
 
-<h3><span class="emoji">🐍</span> Step 4: Install Python</h3>
-<ol>
-  <li>Go to <a href="https://www.python.org/downloads/">python.org/downloads</a></li>
-  <li>Download Python version <strong>3.10 or higher</strong></li>
-  <li>During installation, check the box:<br> ✅ “Add Python to PATH”</li>
-  <li>Click “Customize installation” and ensure <code>pip</code> and <code>Scripts</code> are included</li>
-  <li>After installation, open Command Prompt and run:
-    <ul>
-      <li><code>python --version</code></li>
-      <li><code>where python</code></li>
-      <li><code>echo %PATH%</code></li>
-    </ul>
-  </li>
-  <li>Confirm that two Python-related paths are listed:
-    <ul>
-      <li>Install directory (e.g. <code>C:\Users\YourName\AppData\Local\Programs\Python\Python311</code>)</li>
-      <li>Scripts subdirectory (e.g. <code>C:\Users\YourName\AppData\Local\Programs\Python\Python311\Scripts</code>)</li>
-    </ul>
-  </li>
-  <li>If only one path is listed, uninstall Python and reinstall with the PATH checkbox enabled</li>
-</ol>
-
-<h3><span class="emoji">📦</span> Step 5: Install Required Packages</h3>
-<p>Open Command Prompt and run:</p>
-<pre><code>pip install requests pillow PyGObject</code></pre>
-
-<h3><span class="emoji">🧪</span> Step 6: Activate Your API Key</h3>
-<p>This version includes a pre-placed config file: <code>gimpinator_config.json</code></p>
-<ol>
-  <li>Visit <a href="https://stablehorde.net">Stable Horde</a></li>
-  <li>Log in via Discord, GitHub, etc.</li>
-  <li>Click your username → Account → Copy your API key</li>
-  <li>Open <code>gimpinator_config.json</code> and paste your key:</li>
-</ol>
-
+<h3>5. Save the API key into the config file</h3>
+<p>Open <code>gimpinator_config.json</code> in Notepad (or another text editor) and replace <code>"your-key-here"</code> with your real API key:</p>
 <pre><code>{ "api_key": "your-key-here", "default_model": "SDXL", "default_sampler": "k_dpmpp_2m" }</code></pre>
+<p>Save it with that exact filename, in the same <code>gimpinator_ex</code> folder.</p>
 
-<p>✅ No need to create the file—it’s already included.<br>
-Just paste your key and save.</p>
+<h3>6. Install Python (if you don't already have it)</h3>
+<p>Go to <a href="https://www.python.org/downloads/">python.org/downloads</a>, install Python 3.10 or higher, and check "Add Python to PATH" during setup.</p>
 
-<hr>
+<h3>7. Install the required package</h3>
+<p>Open Command Prompt and run:</p>
+<pre><code>pip install requests</code></pre>
+<p>If "pip" isn't recognized, Python isn't on your PATH yet — reinstall it and make sure "Add Python to PATH" is checked, then restart your computer.</p>
 
-<h2><span class="emoji">🧠</span> How to Generate AI Images</h2>
-<ol>
-  <li>Open GIMP</li>
-  <li>Go to <strong>Filters → Gimpinator → Gimpinator EX</strong></li>
-  <li>Enter a prompt like <code>"a cat piloting a mech suit over Tokyo at sunrise"</code></li>
-  <li>Choose model, resolution, and sampler</li>
-  <li>Click OK—your AI artwork appears directly on your canvas</li>
-</ol>
-
-<p>Want variants? Adjust the seed or prompt and repeat.</p>
+<h3>8. Try it</h3>
+<p>Restart GIMP. Open an image, then go to <strong>Filters → Gimpinator → Gimpinator EX</strong>. Type a prompt, leave Backend as "horde", and click OK.</p>
 
 <hr>
 
-<h2><span class="emoji">🔧</span> Backend Settings</h2>
-<p>You can configure custom AI sources by editing the backend list or patching the default to accept:</p>
-<ul>
-  <li>Stable Diffusion APIs</li>
-  <li>Personal Horde worker URLs</li>
-  <
+<h2>Advanced notes</h2>
+<p><strong>The "Local" backend</strong> is for advanced users only. It expects an image-generation server you're already running, listening on <code>http://127.0.0.1:8000/generate</code> and returning a path to the generated image. If that doesn't mean anything to you, use Horde instead.</p>
+<p><strong>Tested on:</strong> GIMP 3.0 with Python 3.13 on Windows 11.</p>
+<p><strong>24 Oct 2026:</strong> earlier versions of this plugin required typing your Windows username into the plugin file by hand, had dialog fields that were locked and couldn't be changed, and included two backends (Recraft, AIML) that never worked. All of that has been fixed — see the <a href="https://github.com/RangerHawk/Gimpinator-EX-Gimp-3">repo</a> for details.</p>
+
+<hr>
+
+<p>Gimpinator EX is based on the original <a href="https://github.com/PCOW/Gimpinator">Gimpinator plugin by PCOW</a>, licensed under the MIT License. Released under the GNU General Public License v3.0.</p>
+
+<a class="back" href="index.html">&larr; Back to Plugin Archive</a>
+</body>
+</html>

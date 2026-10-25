@@ -1,23 +1,19 @@
-# 🌀 RangerHawk Studios Public Archive
+# RangerHawk Studios — Public Site
 
-This repository powers the public GitHub Pages site for RangerHawk Studios:  
+This repository powers the public GitHub Pages site for RangerHawk Studios:
 https://rangerhawk.github.io/
 
-Here we ritualize plugin drops, emotional restoration scrolls, and formatting-pure documentation cycles.  
-Every sidetrack is archived. Every glyph is earned.
+## What's here
 
-## 🔧 Purpose
+- Plugin downloads and installation guides
+- Documentation for RangerHawk Studios tools
+- Studio links and visuals
 
-This site hosts:
-- Activation guides for RangerHawk plugins
-- Legacy-grade documentation scrolls
-- Symbolic overlays and branded visuals
-- Links to studio portals and future glyphs
+## Feedback & Collaboration
 
-## 🗣️ Feedback & Collaboration
+Found a bug or have a suggestion? Open an issue, or start a discussion on
+[GitHub Discussions](https://github.com/RangerHawk/rangerhawk.github.io/discussions).
 
-Found a trap? Archive it.  
-Want to co-forge a glyph? Submit issues or scrolls via GitHub Discussions.
+---
 
-Forged in Mountain Home, Idaho  
-By RangerHawk Studios • Emotional Restoration through Technical Precision
+RangerHawk Studios — Mountain Home, Idaho

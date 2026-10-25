@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>RangerHawk Studios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RangerHawk Studios — plugins, tools, and documentation, built by a solo indie studio.">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
 
   <script>
@@ -13,87 +14,116 @@
 
   <style>
     :root[data-theme='dark'] {
-      background-color: #000000;
-      color: #FFFFFF;
+      --bg: #0b0b0d;
+      --fg: #eaeaea;
+      --muted: #9a9a9a;
+      --accent: #4fd1c5;
+      --card: #161619;
+      --border: #2a2a2e;
     }
     :root[data-theme='light'] {
-      background-color: #FFFFFF;
-      color: #000000;
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #5a5a5a;
+      --accent: #0f766e;
+      --card: #f6f6f7;
+      --border: #e3e3e5;
     }
+    * { box-sizing: border-box; }
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
     }
     .theme-toggle {
       position: fixed;
       bottom: 1em;
       right: 1em;
-      background: none;
-      border: 1px solid #888;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
       padding: 0.5em 1em;
       cursor: pointer;
       color: inherit;
+      font-size: 0.9em;
       z-index: 1000;
     }
     .banner {
       text-align: center;
-      margin-bottom: 2em;
     }
     .banner img {
       width: 100%;
-      animation: shimmer 8s infinite;
-    }
-    @keyframes shimmer {
-      0% { filter: brightness(1); }
-      50% { filter: brightness(1.15); }
-      100% { filter: brightness(1); }
+      max-height: 320px;
+      object-fit: cover;
+      display: block;
     }
     .content {
-      max-width: 800px;
+      max-width: 760px;
       margin: auto;
-      padding: 2em;
+      padding: 2.5em 1.5em 1em;
+    }
+    h1 {
+      margin: 0 0 0.3em;
+      font-size: 1.9em;
+    }
+    .tagline {
+      color: var(--muted);
+      margin: 0 0 2em;
     }
     a {
-      color: #00ffff;
+      color: var(--accent);
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    .glyph {
-      animation: pulse 2s infinite;
-      display: inline-block;
-      transition: transform 0.3s ease;
+    h2 {
+      font-size: 1.1em;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-top: 2.2em;
+      margin-bottom: 0.8em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4em;
     }
-    .glyph:hover {
-      transform: scale(1.2);
+    ul.index-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.7; }
-      100% { transform: scale(1); opacity: 1; }
+    ul.index-list li {
+      padding: 0.7em 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+    }
+    ul.index-list li:last-child {
+      border-bottom: none;
+    }
+    .status {
+      font-size: 0.85em;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .status.available {
+      color: var(--accent);
     }
     footer {
       text-align: center;
-      padding: 2em;
-      font-size: 0.9em;
-      opacity: 0.8;
-      transition: opacity 0.5s ease;
-    }
-    footer:hover {
-      opacity: 1;
-      animation: glow 3s infinite;
-    }
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #00ffff; }
-      50% { text-shadow: 0 0 15px #00ffff; }
-      100% { text-shadow: 0 0 5px #00ffff; }
+      padding: 2em 1em 3em;
+      font-size: 0.85em;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle theme</button>
   <script>
     function toggleTheme() {
       const current = document.documentElement.getAttribute('data-theme');
@@ -102,37 +132,29 @@
     }
   </script>
 
-<div class="banner">
-  <img src="/assets/banner_new.png?v=1" alt="RangerHawk Studios Banner">
-</div>
-
-<div class="content">
-  <div style="display: flex; align-items: center; gap: 1em;">
-    <span class="glyph" style="font-size: 2em;">🌀</span>
-    <h1 style="margin: 0;">Welcome to the Forge</h1>
-    <img src="/assets/favicon.png" alt="Favicon Glyph" width="48" height="48" class="glyph">
+  <div class="banner">
+    <img src="/assets/banner_new.png?v=1" alt="RangerHawk Studios">
   </div>
-  
-  <p>This is the public archive of glyphs, sidetracks, and restoration scrolls.<br>
-  Here we ritualize plugins, decode formatting traps, and preserve legacy-grade documentation.</p>
 
-<h2>🗂️ Archive Index</h2>
-<ul>
-  <li><a href="/activation-guides/">Activation Guides & Scrolls</a> — <span class="inactive">coming soon</span></li>
-  <li><a href="/plugins/index.html">Plugin Archive</a> — <span class="active">Gimpinator EX now available</span></li>
-  <li><a href="/legacy/">Legacy Documentation</a> — <span class="inactive">coming soon</span></li>
-  <li><a href="https://github.com/RangerHawk/Gimpinator-EX-Gimp-3">🧪 Gimpinator EX Plugin Repo</a></li>
-</ul>
+  <div class="content">
+    <h1>RangerHawk Studios</h1>
+    <p class="tagline">A solo indie studio building plugins, tools, and documentation for creators — no subscriptions, no DRM.</p>
 
-<h2>🗣️ Feedback & Collaboration</h2>
-<p>Found a trap? Archive it.<br>
-Want to co-forge a glyph? Submit issues or scrolls via <a href="https://github.com/RangerHawk/rangerhawk.github.io/discussions">GitHub Discussions</a>.</p>
-</div>
+    <h2>Index</h2>
+    <ul class="index-list">
+      <li><a href="/plugins/index.html">Plugin Archive</a> <span class="status available">Gimpinator EX available</span></li>
+      <li><a href="/activation-guides/">Activation Guides</a> <span class="status">coming soon</span></li>
+      <li><a href="/legacy/">Legacy Documentation</a> <span class="status">coming soon</span></li>
+      <li><a href="https://github.com/RangerHawk/Gimpinator-EX-Gimp-3">Gimpinator EX Plugin Repo (GitHub)</a></li>
+    </ul>
 
-<footer>
-  🪶 Forged in Mountain Home, Idaho<br>
-  Emotional Restoration through Technical Precision<br>
-  Every plugin tested. Every sidetrack preserved.
-</footer>
+    <h2>Feedback & Collaboration</h2>
+    <p>Found a bug or have a suggestion? Open an issue, or start a discussion on
+    <a href="https://github.com/RangerHawk/rangerhawk.github.io/discussions">GitHub Discussions</a>.</p>
+  </div>
+
+  <footer>
+    RangerHawk Studios — Mountain Home, Idaho
+  </footer>
 </body>
 </html>
