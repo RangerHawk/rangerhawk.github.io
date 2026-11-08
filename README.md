@@ -9,6 +9,14 @@ https://rangerhawk.github.io/
 - Documentation for RangerHawk Studios tools
 - Studio links and visuals
 
+## Find us
+
+- Website: https://rangerhawkstudios.com/
+- Discord (join us): https://discord.gg/7wZj6eX3uZ
+- Red World on Facebook: https://www.facebook.com/profile.php?id=61590644273680
+- General questions: contact@rangerhawkstudios.com
+- Support: support@rangerhawkstudios.com
+
 ## Feedback & Collaboration
 
 Found a bug or have a suggestion? Open an issue, or start a discussion on
